@@ -70,3 +70,17 @@ select, option{
     background-image: url("../svg/icon-search.svg");
 
 }
+
+
+
+
+
+.link-title{
+    text-decoration: none;
+  
+    transition: .3s ease;
+  
+    &:hover{
+      text-decoration: underline;
+    }
+  }

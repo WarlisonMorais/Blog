@@ -1,4 +1,7 @@
+// Headers and Footers
 
+import Header from "pages/Header";
+import Footer from "pages/Footer";
 
 
 // components
@@ -72,6 +75,9 @@ const Home = () =>{
     return(
 
         <>
+            <Header/>
+
+
             <Hero/>
 
 
@@ -81,8 +87,11 @@ const Home = () =>{
                 <div className="grid-5">
                     <img src={star} className="icon-l" alt="" />
                 
+                   
 
                     <h3 className="mt-2">Os melhores e mais bem votados posts do mês.</h3>
+                 
+                  
                     <p className="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Eligendi, ipsa vero? Ut, inventore unde doloremque
                         cupiditate consectetur, 
@@ -123,14 +132,33 @@ const Home = () =>{
 
         <div className="row mt-4">
         
-            <Card/>
-            <Card/>
-            <Card/>
+           {
+
+            mostseen.map((item) =>{
+                return <Card key={item.id}  content={item} />
+            })
+
+
+           }
             
         </div>
     </seciton>
 
-    <Banner/>
+           {
+
+                banner.map((item) =>{
+
+                    return <Banner key={item.id} content={item}/>
+
+
+                })
+
+
+           }
+
+
+           
+           <Footer/>
 
         </>
     )

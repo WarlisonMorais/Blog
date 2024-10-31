@@ -1891,4 +1891,12 @@ select, option {
   transform: translate3d(-4px, 0, 0);
   width: 56px;
   background-image: url("../svg/icon-search.svg");
+}
+
+.link-title {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.link-title:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
